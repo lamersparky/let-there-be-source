@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07090d">
+<meta name="description" content="LET THERE BE SOURCE — the software workshop of PROJECT GUT. Explore published projects and works in progress.">
+<title>LET THERE BE SOURCE — PROJECT GUT</title>
+<link rel="icon" type="image/png" href="assets/opossum-fleet-alliance.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Let There Be Source home">
+    <img src="assets/opossum-fleet-alliance.png" alt="Opossum Fleet Alliance insignia">
+    <span><strong>LET THERE BE SOURCE</strong><small>PROJECT GUT · SOFTWARE WORKSHOP</small></span>
+  </a>
+  <nav><a href="#projects">Projects</a><a href="#status">Status guide</a><a href="#thanks">Special thanks</a><a class="github-link" href="https://github.com/lamersparky" target="_blank" rel="noopener">GitHub ↗</a></nav>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="pulse"></span> INDEPENDENT SOFTWARE · BUILT WITH PURPOSE</div>
+      <h1>LET THERE BE<br><span>SOURCE.</span></h1>
+      <p class="hero-lede">Practical tools. Native code. No unnecessary noise.</p>
+      <p class="hero-text">Welcome to the workshop of PROJECT GUT: a growing collection of utilities, experiments, and software built to solve real problems. Published work links directly to its GitHub repository. Projects not yet published are clearly marked <b>IN PROGRESS</b>.</p>
+      <div class="hero-actions"><a class="button primary" href="#projects">Explore the projects <span>↓</span></a><a class="button secondary" href="https://github.com/lamersparky" target="_blank" rel="noopener">Visit GitHub ↗</a></div>
+      <div class="hero-stats"><div><strong>OPEN</strong><span>When published</span></div><i></i><div><strong>LOCAL-FIRST</strong><span>Privacy-minded design</span></div><i></i><div><strong>BUILT TO LAST</strong><span>Small tools, clear purpose</span></div></div>
+    </div>
+    <div class="hero-mark">
+      <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+      <img src="assets/opossum-fleet-alliance.png" alt="Opossum Fleet Alliance emblem">
+      <div class="mark-label"><span>◆</span> OPOSSUM FLEET ALLIANCE <span>◆</span></div>
+    </div>
+    <div class="hero-bottomline"><span>01 / THE WORKSHOP</span><span>BUILT WITH CURIOSITY. TESTED WITH STUBBORNNESS.</span></div>
+  </section>
+
+  <section class="section projects-section" id="projects">
+    <div class="section-head">
+      <div><div class="eyebrow">THE INVENTORY</div><h2>Tools of the trade<span class="blue">.</span></h2><p class="muted">Browse the workshop. Repository links are provided only for projects with a known GitHub destination; work that is not published is identified as in progress.</p></div>
+      <div class="count-panel"><strong id="visibleCount">—</strong><span>PROJECT ENTRIES</span></div>
+    </div>
+    <div class="controls">
+      <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search projects, languages, purpose…" autocomplete="off" aria-label="Search projects"></label>
+      <select id="statusFilter" aria-label="Filter by status"><option value="all">All statuses</option><option value="published">Published on GitHub</option><option value="progress">In progress</option></select>
+      <select id="categoryFilter" aria-label="Filter by category"><option value="all">All categories</option></select>
+      <select id="sortSelect" aria-label="Sort projects"><option value="featured">Featured order</option><option value="name">Name A–Z</option><option value="status">Status</option></select>
+    </div>
+    <div class="results-line"><span id="resultsLabel">Loading inventory…</span><button id="resetFilters" class="text-button">Reset filters ↺</button></div>
+    <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+    <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No matching projects</h3><p>Try another search term or reset the filters.</p><button class="button secondary" id="emptyReset">Reset filters</button></div>
+    <p class="inventory-note"><span class="note-mark">i</span> Catalog accuracy matters. “Published on GitHub” entries link to a repository. “In progress” entries are not presented as published projects.</p>
+  </section>
+
+  <section class="status-section" id="status">
+    <div class="section-head"><div><div class="eyebrow">NO AMBIGUITY</div><h2>Know the status<span class="blue">.</span></h2></div></div>
+    <div class="status-cards">
+      <article class="status-card published-card"><div class="status-icon">↗</div><span class="status-pill published">PUBLISHED ON GITHUB</span><h3>Publicly available</h3><p>The card links to its GitHub repository. Source, documentation, and release details are available there to the extent provided by that project.</p></article>
+      <article class="status-card progress-card"><div class="status-icon">⌁</div><span class="status-pill progress">IN PROGRESS</span><h3>Still in the workshop</h3><p>The project is being developed, tested, or prepared for release. No GitHub publication is implied, and no download link is shown.</p></article>
+    </div>
+  </section>
+
+  <section class="manifesto">
+    <div class="manifesto-symbol">⟡</div><div><div class="eyebrow">THE WORKING PRINCIPLE</div><h2>Make it useful.<br><span>Make it honest.</span></h2></div>
+    <p>Software should earn its place. Keep it understandable, respect the machine it runs on, preserve user control, and say plainly what is finished—and what is not.</p>
+  </section>
+
+  <section class="section thanks-section" id="thanks">
+    <div class="eyebrow">THE PEOPLE BEHIND THE PROCESS</div><h2>Special thanks<span class="blue">.</span></h2>
+    <p class="muted thanks-intro">Good work is rarely made in isolation. This workshop is shaped by human curiosity and a collection of useful collaborators.</p>
+    <div class="thanks-grid">
+      <article class="thanks-card"><div class="thanks-mark openai-mark">✳</div><div><h3>ChatGPT</h3><p>For research, drafting, problem-solving, and helping turn ideas into practical plans.</p></div><span class="thanks-number">01</span></article>
+      <article class="thanks-card"><div class="thanks-mark buddy-mark">B</div><div><h3>Buddy</h3><p>Architecture, code review, and a second set of eyes when the details matter.</p></div><span class="thanks-number">02</span></article>
+      <article class="thanks-card apostles-card"><div class="thanks-mark apostle-mark">✦</div><div><h3>The Twelve Apostles of Lamer</h3><p>A collaborative crew for engineering, design, security, research, quality assurance, Linux infrastructure, Android, continuity, and creative work.</p></div><span class="thanks-number">12</span></article>
+    </div>
+  </section>
+</main>
+<footer><a class="footer-brand" href="#top">LET THERE BE SOURCE<span> / </span>PROJECT GUT</a><span>Built with curiosity. Published with care.</span><a href="https://github.com/lamersparky" target="_blank" rel="noopener">GitHub profile ↗</a></footer>
+<script src="projects.js"></script><script src="app.js"></script>
+</body></html>
